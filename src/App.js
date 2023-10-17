@@ -1,14 +1,17 @@
+// App.js
+
 import React from 'react';
-import Header from './Header';
-import Profile from './Profile';
-// Import other components
+import VideoIntro from './Components/VideoPage';
 
 function App() {
+    const handleVideoEnd = () => {
+        // Do something after the video ends, like transitioning to another view.
+    };
+
     return (
-        <div className="app">
-            <Header />
-            <Profile />
-            {/* Add other components */}
+        <div className="App">
+            <VideoIntro onVideoEnd={handleVideoEnd} />
+            {/* Rest of your components */}
         </div>
     );
 }
