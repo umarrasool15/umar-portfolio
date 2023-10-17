@@ -1,19 +1,36 @@
-// App.js
-
 import React from 'react';
-import VideoIntro from './Components/VideoPage';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import VideoIntro from './Components/VideoPage'
+import Navbar from './Components/navbar'; 
+import AboutMe from './Components/AboutMe';
+import Skills from './Components/Skills';
+import theme from './theme';
 
 function App() {
-    const handleVideoEnd = () => {
-        // Do something after the video ends, like transitioning to another view.
-    };
+  return (
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+          <RoutesWithNavbar />
+      </BrowserRouter>
+    </ChakraProvider>
+  );
+}
 
-    return (
-        <div className="App">
-            <VideoIntro onVideoEnd={handleVideoEnd} />
-            {/* Rest of your components */}
-        </div>
-    );
+// New component to include Navbar conditionally
+function RoutesWithNavbar() {
+  const location = useLocation();
+
+  return (
+    <div>
+      {location.pathname !== "/" && <Navbar />}
+      <Routes>
+          <Route path="/" element={<VideoIntro />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/skills" element={<Skills />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

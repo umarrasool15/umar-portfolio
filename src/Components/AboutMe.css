@@ -1,9 +1,10 @@
+
 .about-me-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px;
-    font-family: 'Arial', sans-serif;  /* you can choose any font you prefer */
+    font-family: 'Markazi Text', serif;
 }
 
 .image-container {

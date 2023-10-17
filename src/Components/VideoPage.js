@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './VideoIntro.css';
+
+// ... other imports ...
 
 const VideoIntro = ({ onVideoEnd }) => {
     const [showPrompt, setShowPrompt] = useState(true);
     const [playVideo, setPlayVideo] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleKeyPress = (event) => {
-            console.log("Key Pressed:", event.key);
             if (event.key === 'x' || event.key === 'X') {
-                console.log("X key detected.");
                 setShowPrompt(false);
                 setPlayVideo(true);
             }
@@ -26,14 +28,16 @@ const VideoIntro = ({ onVideoEnd }) => {
     return (
         <div className="video-intro">
             {showPrompt && <span>Press X to continue</span>}
-    
+
             {playVideo && (
                 <video 
                     width="100vw" 
                     height="100vh" 
                     autoPlay 
                     onEnded={() => {
+                        console.log("Video ended. Trying to navigate to /about");
                         setPlayVideo(false);
+                        navigate('/about');  // Redirect to your main homepage
                         if (onVideoEnd) onVideoEnd();
                     }}
                 >
