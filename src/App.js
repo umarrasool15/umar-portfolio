@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import VideoIntro from './Components/VideoPage'
 import Navbar from './Components/navbar'; 
 import AboutMe from './Components/AboutMe';

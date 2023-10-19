@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Flex, Text, Icon, Heading } from "@chakra-ui/react";
-import { FaArrowDown } from "react-icons/fa";
+import { Box, Flex, Text, Heading } from "@chakra-ui/react";
 
 const Experience = () => {
     const [activeJob, setActiveJob] = useState(0); // default to the first job

@@ -1,5 +1,4 @@
-import { Flex, Text, Button, Image, Spacer, useColorMode, Link } from '@chakra-ui/react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Flex, Text, Button, Image, useColorMode, Link } from '@chakra-ui/react';
 import { FaFileDownload, FaLinkedin, FaGithub} from 'react-icons/fa';
 
 const AboutMe = () => {
