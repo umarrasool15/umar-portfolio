@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './VideoIntro.css';
 
-// ... other imports ...
 
 const VideoIntro = ({ onVideoEnd }) => {
     const [showPrompt, setShowPrompt] = useState(true);
@@ -19,7 +18,6 @@ const VideoIntro = ({ onVideoEnd }) => {
 
         window.addEventListener('keydown', handleKeyPress);
 
-        // Cleanup the event listener on component unmount
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };
@@ -37,7 +35,7 @@ const VideoIntro = ({ onVideoEnd }) => {
                     onEnded={() => {
                         console.log("Video ended. Trying to navigate to /about");
                         setPlayVideo(false);
-                        navigate('/about');  // Redirect to your main homepage
+                        navigate('/about');  
                         if (onVideoEnd) onVideoEnd();
                     }}
                 >

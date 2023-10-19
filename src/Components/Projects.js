@@ -88,7 +88,6 @@ const Projects = () => {
             liveLink: "https://umarrasool.dev",
             githubLink: "https://github.com/umarrasool15/umar-portfolio",
         },
-        // ... (add more projects here as needed)
     ];
 
     return (

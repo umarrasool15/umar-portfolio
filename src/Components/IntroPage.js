@@ -17,7 +17,7 @@ const IntroPage = () => {
 
         window.addEventListener('keydown', handleKeyPress);
 
-        // Cleanup the event listener on component unmount
+        
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };

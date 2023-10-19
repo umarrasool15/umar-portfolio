@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Flex, Text, Heading } from "@chakra-ui/react";
 
 const Experience = () => {
-    const [activeJob, setActiveJob] = useState(0); // default to the first job
+    const [activeJob, setActiveJob] = useState(0); 
 
     const jobs = [
         {
@@ -48,14 +48,14 @@ const Experience = () => {
                             key={index} 
                             marginBottom="10px" 
                             paddingLeft="10px" 
-                            borderLeft={activeJob === index ? "4px solid teal" : "4px solid transparent"} // Highlight active job with a border
+                            borderLeft={activeJob === index ? "4px solid teal" : "4px solid transparent"} 
                         >
                             <Text
                             
                                 fontSize="lg"
                                 fontWeight={activeJob === index ? 'bold' : 'normal'}
                                 cursor="pointer"
-                                color={activeJob === index ? 'teal' : 'inherit'} // Color change for active job
+                                color={activeJob === index ? 'teal' : 'inherit'} 
                                 onClick={() => setActiveJob(index)}
                             >
                                 {job.company}

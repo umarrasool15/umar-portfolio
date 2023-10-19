@@ -19,7 +19,6 @@ function App() {
   );
 }
 
-// New component to include Navbar conditionally
 function RoutesWithNavbar() {
   const location = useLocation();
 
