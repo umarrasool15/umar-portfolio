@@ -1,0 +1,27 @@
+/* Projects.css */
+
+.Projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fff; /* Set your desired background color */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Projects-title {
+    font-size: 3xl;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .Projects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem; /* Adjust the gap between cards */
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds the viewport */
+  }
+  
