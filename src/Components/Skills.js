@@ -16,6 +16,10 @@ const SkillCard = ({ icon, title, description, details }) => {
             borderRadius="8px"
             width="100%"
             boxShadow="md"
+            _hover={{
+                boxShadow: '0 0 0 3px teal', // Glow effect on hover
+                transition: 'boxShadow 0.2s' // Optional: smooth transition for the glow effect
+            }}
         >
             <VStack spacing={3} alignItems="start">
                 <Icon as={icon} boxSize={8} />

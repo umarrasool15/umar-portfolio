@@ -5,6 +5,7 @@ import VideoIntro from './Components/VideoPage'
 import Navbar from './Components/navbar'; 
 import AboutMe from './Components/AboutMe';
 import Skills from './Components/Skills';
+import Experience from './Components/Experience';
 import theme from './theme';
 
 function App() {
@@ -27,6 +28,7 @@ function RoutesWithNavbar() {
       <Routes>
           <Route path="/" element={<VideoIntro />} />
           <Route path="/about" element={<AboutMe />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />
       </Routes>
     </div>

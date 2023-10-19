@@ -1,9 +1,19 @@
 import { Box, Button, Flex, Image, IconButton, Spacer, useColorMode } from '@chakra-ui/react';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
+    const location = useLocation();
+    
+    const getButtonStyles = (path) => {
+        if (location.pathname === path) {
+            return {
+                color: 'teal'
+            };
+        }
+        return {};
+    };
 
     return (
         <Box 
@@ -18,10 +28,18 @@ const Navbar = () => {
                 <Spacer />
 
                 {/* Links */}
-                <Link to="/about"><Button as="a" variant="link" mr="5">About</Button></Link>
-                <Link to="/experience"><Button as="a" variant="link" mr="5">Experience</Button></Link>
-                <Link to="/skills"><Button as="a" variant="link" mr="5">Skills</Button></Link>
-                <Link to="/projects"><Button as="a" variant="link" mr="5">Projects</Button></Link>
+                <Link to="/about">
+                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/about")}>About</Button>
+                </Link>
+                <Link to="/experience">
+                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/experience")}>Experience</Button>
+                </Link>
+                <Link to="/skills">
+                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/skills")}>Skills</Button>
+                </Link>
+                <Link to="/projects">
+                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/projects")}>Projects</Button>
+                </Link>
 
                 {/* Toggle Dark/Light Mode */}
                 <IconButton 
