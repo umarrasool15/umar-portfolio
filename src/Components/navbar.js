@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, IconButton, Spacer, useColorMode } from '@chakra-ui/react';
+import { Box, Button, Flex, Image, IconButton, Spacer, useColorMode, useBreakpointValue } from '@chakra-ui/react';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -6,6 +6,8 @@ const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const location = useLocation();
     
+    const displayLogo = useBreakpointValue({ base: 'none', sm: 'block' }); // Hide on base (smallest breakpoint), show from 'sm' breakpoint and above
+
     const getButtonStyles = (path) => {
         if (location.pathname === path) {
             return {
@@ -23,9 +25,10 @@ const Navbar = () => {
         >
             <Flex alignItems="center">
                 {/* Logo on the left */}
-                <Image src="favicon.png" alt="Your Logo" boxSize="40px" />
+                <Image display={displayLogo} src="favicon.png" alt="Your Logo" boxSize="40px" />
 
                 <Spacer />
+
 
                 {/* Links */}
                 <Link to="/about">

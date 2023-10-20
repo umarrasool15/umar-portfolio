@@ -50,7 +50,7 @@ const Skills = () => {
                 <SkillCard
                     icon={FaLayerGroup}
                     title="Frameworks"
-                    details={["Linux", "GitHub", "React", "NodeJS", "Django", "Flask", "Git", "Firebase", "Kibana", "WordPress"]}
+                    details={["Linux", "React", "NodeJS", "Django", "Flask", "Selenium", "Git", "Firebase", "Kibana", "WordPress"]}
                 />
                 <SkillCard
                     icon={FaTools}
