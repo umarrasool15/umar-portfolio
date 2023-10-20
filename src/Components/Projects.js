@@ -30,7 +30,7 @@ const ProjectCard = ({ project, isEven }) => {
             _hover={{
                 width: "100%",
                 zIndex: 10,
-                transition: 'width 0.3s'
+                transition: 'width 0.25s'
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

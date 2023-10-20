@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
-import VideoIntro from './Components/VideoPage'
 import Navbar from './Components/navbar'; 
 import AboutMe from './Components/AboutMe';
 import Skills from './Components/Skills';
@@ -24,10 +23,9 @@ function RoutesWithNavbar() {
 
   return (
     <div>
-      {location.pathname !== "/" && <Navbar />}
+      <Navbar />
       <Routes>
-          <Route path="/" element={<VideoIntro />} />
-          <Route path="/about" element={<AboutMe />} />
+          <Route path="/" element={<AboutMe />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />

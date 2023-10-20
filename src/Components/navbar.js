@@ -28,8 +28,8 @@ const Navbar = () => {
                 <Spacer />
 
                 {/* Links */}
-                <Link to="/about">
-                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/about")}>About</Button>
+                <Link to="/">
+                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/")}>About</Button>
                 </Link>
                 <Link to="/experience">
                     <Button as="a" variant="link" mr="5" {...getButtonStyles("/experience")}>Experience</Button>
