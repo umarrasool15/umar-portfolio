@@ -6,6 +6,7 @@ import AboutMe from './Components/AboutMe';
 import Skills from './Components/Skills';
 import Experience from './Components/Experience';
 import Projects from './Components/Projects';
+import TerminalStart from './Components/Terminal';
 import theme from './theme';
 
 function App() {
@@ -25,10 +26,12 @@ function RoutesWithNavbar() {
     <div>
       <Navbar />
       <Routes>
-          <Route path="/" element={<AboutMe />} />
+          <Route path="/" element={<TerminalStart />} />
+          <Route path="/about" element={<AboutMe />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
+
       </Routes>
     </div>
   );

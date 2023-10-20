@@ -28,7 +28,7 @@ const Navbar = () => {
                 <Spacer />
 
                 {/* Links */}
-                <Link to="/">
+                <Link to="/about">
                     <Button as="a" variant="link" mr="5" {...getButtonStyles("/")}>About</Button>
                 </Link>
                 <Link to="/experience">
