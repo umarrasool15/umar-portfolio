@@ -18,7 +18,7 @@ function TerminalStart() {
       let lineIndex = 0;
   
       const getPrefix = (lineType) => {
-        if (lineType === 'command', 'info') return '> ';
+        if (lineType === 'command' || lineType === 'info') return '> ';
         else return '';
     };
     

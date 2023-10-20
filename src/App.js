@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 import Navbar from './Components/navbar'; 
 import AboutMe from './Components/AboutMe';
@@ -20,7 +20,6 @@ function App() {
 }
 
 function RoutesWithNavbar() {
-  const location = useLocation();
 
   return (
     <div>
