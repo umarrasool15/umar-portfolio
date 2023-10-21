@@ -38,10 +38,10 @@ const Experience = () => {
     ];
 
     return (
-        <Box maxWidth="1200px" margin="0 auto" padding="50px">
-            <Heading marginBottom="50px">My Work Experience</Heading>
+        <Box maxWidth="1200px" margin="0 auto" padding="50px" p={{ base: "20px", md: "50px" }}>
+            <Heading marginBottom={{ base: "30px", md: "50px" }}>My Work Experience</Heading>
             
-            <Flex direction={{ base: "column", md: "row" }}>
+            <Flex direction={{ base: "column", md: "row" }} gap="20px">
                 <Box flex="1">
                     {jobs.map((job, index) => (
                         <Box 
@@ -51,7 +51,6 @@ const Experience = () => {
                             borderLeft={activeJob === index ? "4px solid teal" : "4px solid transparent"} 
                         >
                             <Text
-                            
                                 fontSize="lg"
                                 fontWeight={activeJob === index ? 'bold' : 'normal'}
                                 cursor="pointer"
@@ -59,14 +58,13 @@ const Experience = () => {
                                 onClick={() => setActiveJob(index)}
                             >
                                 {job.company}
-                                {activeJob === index}
                             </Text>
                         </Box>
                     ))}
                 </Box>
 
-                <Box flex="2" marginLeft={{ md: "50px" }}>
-                <Text fontSize="xl" fontWeight="bold" color="teal">{jobs[activeJob].role}</Text>
+                <Box flex="2" mt={{ base: "20px", md: "0" }} marginLeft={{ md: "50px" }}>
+                    <Text fontSize="xl" fontWeight="bold" color="teal">{jobs[activeJob].role}</Text>
                     <Text>{jobs[activeJob].date}</Text>
                     <Box marginTop="20px">
                         {jobs[activeJob].responsibilities.map((resp, index) => (

@@ -9,7 +9,6 @@ import {
     Heading,
     Link,
 } from '@chakra-ui/react';
-
 import { useState } from 'react';
 
 const ProjectCard = ({ project, isEven }) => {
@@ -21,14 +20,14 @@ const ProjectCard = ({ project, isEven }) => {
             padding="20px"
             borderWidth="1px"
             borderRadius="8px"
-            width="50%"
+            width={{ base: "100%", md: "50%" }}
             minWidth="250px"
-            maxWidth="calc(50% - 10px)"
+            maxWidth={{ base: "100%", md: "calc(50% - 10px)" }}
             boxShadow="md"
             mb="4"
-            mr={isEven ? "0" : "4"}
+            mr={{ base: "0", md: isEven ? "0" : "4" }}
             _hover={{
-                width: "100%",
+                width: { base: "100%", md: "100%" },
                 zIndex: 10,
                 transition: 'width 0.25s'
             }}
@@ -61,7 +60,6 @@ const ProjectCard = ({ project, isEven }) => {
     );
 };
 
-
 const Projects = () => {
     const projectsList = [
         {
@@ -92,7 +90,7 @@ const Projects = () => {
 
     return (
         <Box maxWidth="1200px" margin="0 auto" padding="50px" p={{ base: "20px", md: "50px" }}>
-            <Heading marginBottom="50px">My Projects</Heading>
+            <Heading marginBottom={{ base: "30px", md: "50px" }}>My Projects</Heading>
             <Flex direction={{ base: "column", md: "row" }} gap="20px">
                 {projectsList.map((project, index) => (
                     <ProjectCard
@@ -107,3 +105,7 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
+
+
