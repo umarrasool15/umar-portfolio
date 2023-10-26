@@ -7,7 +7,7 @@ const Experience = () => {
     const jobs = [
         {
             company: "Thales",
-            role: "Software Engineer Intern @ Thales",
+            role: "Software Engineer Intern",
             date: "Sep 2023 - Present",
             responsibilities: [
                 "Utilized HTML, CSS, Django, and Python to build D-SPICO web-app for train safety monitoring and testing, participating in both front-end and back-end development",
@@ -17,7 +17,7 @@ const Experience = () => {
         },
         {
             company: "AGE-WELL",
-            role: "Web Developer, RA @ AGE-WELL",
+            role: "Web Developer, RA",
             date: "Mar 2023 - Present",
             responsibilities: [
                 "Web development for responsive website using HTML and CSS hosted on WordPress, incorporating design elements and accessibility features for an intuitive user experience",
@@ -27,7 +27,7 @@ const Experience = () => {
         },
         {
             company: "Wilfrid Laurier University",
-            role: "AVIT Student Support Intern @ WLU",
+            role: "AVIT Student Support Intern",
             date: "Sep 2022 - Aug 2023",
             responsibilities: [
                 "Led campus wide internal website and database restructure, to aid professors and faculty in getting acquainted with new or upgraded classroom spaces, including tutorials on how to use specialized technology and equipment for over 104 unique classrooms",

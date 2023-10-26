@@ -71,12 +71,12 @@ const Projects = () => {
             githubLink: "https://github.com/Rayaan-khan428/huberman-ai",
         },
         {
-            title: "InAFlash | Fullstack",
-            description: "InAFlash is an intuitive online study tool that creates unique flashcards and quizzes based on user prompts. It uses Co:Here’s Natural Language Processing API.",
-            technologies: ["HTML", "CSS", "JavaScript", "Node.js","Cohere"],
-            image: "/inaflash.png",
-            liveLink: "https://github.com/apeman-alt/InAFlash",
-            githubLink: "https://github.com/apeman-alt/InAFlash",
+            title: "Research2Slides | Fullstack",
+            description: "Developed a RESTful API that transforms research papers into PowerPoints with summarized content and attractive layouts, saving users significant time and improving summary accuracy through context clue recognition.",
+            technologies: ["Java", "Spring Boot", "React", "Apache POI","Cohere"],
+            image: "/research2slides.png",
+            liveLink: "https://research2-slides-front-pb1jbmyl5-rayaan-khan428.vercel.app/",
+            githubLink: "https://github.com/Rayaan-khan428/Research2SlidesWebApp",
         },
         {
             title: "Portfolio | Frontend",

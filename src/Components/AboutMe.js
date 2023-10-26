@@ -28,18 +28,18 @@ const AboutMe = () => {
                 <Text textAlign="center" fontSize="md" mt="7">Seeking Internships for Winter 2024 / Summer 2024.</Text>
 
                 <Flex mt="6" gridGap="3">
-                    <Link href="/Umar_Rasool_Resume.pdf" download>
+                    <a href="https://drive.google.com/file/d/15QF-olHjVSTMzmpkoVJ6znc45TUwk-tK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <Button 
                             leftIcon={<FaFileDownload />} 
                             variant="outline"
                             _hover={{
-                                boxShadow: '0 0 0 3px teal',
-                                transition: 'boxShadow 0.2s'
+                            boxShadow: '0 0 0 3px teal',
+                            transition: 'boxShadow 0.2s'
                             }}
                         >
                             Resume
                         </Button>
-                    </Link>
+                        </a>
                     <Link href="https://www.linkedin.com/in/umarrasool" isExternal>
                         <Button 
                             leftIcon={<FaLinkedin />} 
