@@ -63,6 +63,14 @@ const ProjectCard = ({ project, isEven }) => {
 const Projects = () => {
     const projectsList = [
         {
+            title: "Leetr | Fullstack",
+            description: "Leetr is an application that provides a clean dashboard for your Leetcode stats, as well as SMS reminders to keep you on track. Users are encouraged to use our corresponding Chrome extension that collects additional information about their Leetcode sessions, and helps users improve overtime.",
+            technologies: ["React", "HTML", "CSS", "ExpressJS", "NodeJS","MongoDB", "Infobip API"],
+            image: "/dashboard.jpeg",
+            liveLink: "https://github.com/Rayaan-khan428/leetr",
+            githubLink: "https://github.com/Rayaan-khan428/leetr",
+        },
+        {
             title: "Huberman AI | Fullstack",
             description: "Huberman AI is a GPT powered chatbot that allows users to ask health and lifestyle related questions. It is trained using the transcripts of Dr. Andrew Huberman's medical podcast.",
             technologies: ["React", "CSS", "Python", "Flask", "OpenAI","ChakraUI"],
@@ -77,14 +85,6 @@ const Projects = () => {
             image: "/research2slides.png",
             liveLink: "https://research2-slides-front-pb1jbmyl5-rayaan-khan428.vercel.app/",
             githubLink: "https://github.com/Rayaan-khan428/Research2SlidesWebApp",
-        },
-        {
-            title: "Portfolio | Frontend",
-            description: "Personal portfolio website created with fully functional responsive elements and animations including light/dark mode, router, and elements from ChakraUI.",
-            technologies: ["React", "CSS", "ChakraUI"],
-            image: "/portfolio.png",
-            liveLink: "https://umarrasool.dev",
-            githubLink: "https://github.com/umarrasool15/umar-portfolio",
         },
     ];
 

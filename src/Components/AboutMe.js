@@ -25,7 +25,7 @@ const AboutMe = () => {
                 <Text fontSize="3xl" fontWeight="bold">Umar Rasool</Text>
                 <Text textAlign="center" fontSize="md" mt="2">Aspiring Developer.</Text>
                 <Text textAlign="center" fontSize="md" mt="2">Lifelong Learner.</Text>
-                <Text textAlign="center" fontSize="md" mt="7">Seeking Internships for Winter 2024 / Summer 2024.</Text>
+                <Text textAlign="center" fontSize="md" mt="7">Seeking Internships for Fall 2024 / Winter 2025.</Text>
 
                 <Flex mt="6" gridGap="3">
                     <a href="https://drive.google.com/file/d/15QF-olHjVSTMzmpkoVJ6znc45TUwk-tK/view?usp=sharing" target="_blank" rel="noopener noreferrer">

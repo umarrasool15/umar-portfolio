@@ -6,9 +6,19 @@ const Experience = () => {
 
     const jobs = [
         {
+            company: "RBC",
+            role: "Software Engineer Intern",
+            date: "Jan 2024 - Present",
+            responsibilities: [
+                "Utilized RedHat Ansible and Python to build automation playbooks to automate repetitive internal application maintenance routines",
+                "Planned and designed new ServiceNow API architectural integration to ensure use-case compatibility for various departmental site reliability requirements",
+                "Worked with senior engineers to automate creation of current state architecture blueprints for 66 applications to comply with OFSI bill B-13"
+            ]
+        },
+        {
             company: "Thales",
             role: "Software Engineer Intern",
-            date: "Sep 2023 - Present",
+            date: "Sep 2023 - Dec 2023",
             responsibilities: [
                 "Utilized HTML, CSS, Django, and Python to build D-SPICO web-app for train safety monitoring and testing, participating in both front-end and back-end development",
                 "Worked with senior engineers to modify current D-SPICO application to adapt to requirements for Wayside Train Monitoring System",
