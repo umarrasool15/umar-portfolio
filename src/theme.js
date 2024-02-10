@@ -10,7 +10,7 @@ const theme = extendTheme({
     brand: {
       lightBackground: '#f7f9fc',
       lightText: '#333',
-      darkBackground: '#180021',
+      darkBackground: '#010114',
       darkText: '#f7f9fc',
     },
   },
