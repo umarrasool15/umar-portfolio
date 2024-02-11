@@ -1,7 +1,7 @@
 import { Flex, Text, Button, Image, useColorMode, Link } from '@chakra-ui/react';
 import { FaFileDownload, FaLinkedin, FaGithub} from 'react-icons/fa';
 
-const AboutMe = () => {
+const Home = () => {
     const { colorMode } = useColorMode();
 
     return (
@@ -33,7 +33,7 @@ const AboutMe = () => {
                             leftIcon={<FaFileDownload />} 
                             variant="outline"
                             _hover={{
-                            boxShadow: '0 0 0 3px teal',
+                            boxShadow: '0 0 0 3px #005B41',
                             transition: 'boxShadow 0.2s'
                             }}
                         >
@@ -45,7 +45,7 @@ const AboutMe = () => {
                             leftIcon={<FaLinkedin />} 
                             variant="outline"
                             _hover={{
-                                boxShadow: '0 0 0 3px teal',
+                                boxShadow: '0 0 0 3px #005B41',
                                 transition: 'boxShadow 0.2s'
                             }}
                         >
@@ -57,7 +57,7 @@ const AboutMe = () => {
                             leftIcon={<FaGithub />} 
                             variant="outline"
                             _hover={{
-                                boxShadow: '0 0 0 3px teal',
+                                boxShadow: '0 0 0 3px #005B41',
                                 transition: 'boxShadow 0.2s'
                             }}
                         >
@@ -71,4 +71,4 @@ const AboutMe = () => {
     );
 }
 
-export default AboutMe;
+export default Home;

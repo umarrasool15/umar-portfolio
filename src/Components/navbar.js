@@ -11,7 +11,7 @@ const Navbar = () => {
     const getButtonStyles = (path) => {
         if (location.pathname === path) {
             return {
-                color: 'teal'
+                color: '#005B41'
             };
         }
         return {};
@@ -31,8 +31,8 @@ const Navbar = () => {
 
 
                 {/* Links */}
-                <Link to="/about">
-                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/")}>About</Button>
+                <Link to="/home">
+                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/")}>Home</Button>
                 </Link>
                 <Link to="/experience">
                     <Button as="a" variant="link" mr="5" {...getButtonStyles("/experience")}>Experience</Button>

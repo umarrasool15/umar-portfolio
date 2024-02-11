@@ -9,10 +9,11 @@ import {
     Heading,
     Link,
 } from '@chakra-ui/react';
-import { useState } from 'react';
 
-const ProjectCard = ({ project, isEven }) => {
-    const [isHovered, setIsHovered] = useState(false);
+const ProjectCard = ({ project }) => {
+    // Define the background color for the badges
+    const badgeBg = "#005B41"; // Custom green color
+    const badgeColor = "white"; // Text color for the badges
 
     return (
         <Box
@@ -20,36 +21,49 @@ const ProjectCard = ({ project, isEven }) => {
             padding="20px"
             borderWidth="1px"
             borderRadius="8px"
-            width={{ base: "100%", md: "50%" }}
+            width={{ base: "100%", md: "calc(50% - 10px)" }}
             minWidth="250px"
-            maxWidth={{ base: "100%", md: "calc(50% - 10px)" }}
             boxShadow="md"
             mb="4"
-            mr={{ base: "0", md: isEven ? "0" : "4" }}
+            mr={{ base: "0", md: "2" }}
+            transition="all 0.2s ease-in-out"
             _hover={{
-                width: { base: "100%", md: "100%" },
-                zIndex: 10,
-                transition: 'width 0.25s'
+                transform: 'scale(1.05)',
+                boxShadow: 'xl',
+                borderColor: '#005B41', 
             }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
         >
-            {isHovered && <Image src={project.image} alt={project.title} />}
+            <Image 
+                src={project.image} 
+                alt={project.title} 
+                borderRadius="lg"
+                _hover={{ opacity: 0.8 }} 
+            />
             <VStack spacing={3} p="5" alignItems="start">
                 <Text fontWeight="bold" fontSize="xl">
                     {project.title}
                 </Text>
-                <Text>{project.description}</Text>
+                <Text>
+                    {project.description}
+                </Text>
                 <Flex wrap="wrap" gridGap="2">
                     {project.technologies.map((tech, index) => (
-                        <Badge key={index} colorScheme="teal">
+                        <Badge
+                            key={index}
+                            bg={badgeBg}
+                            color={badgeColor}
+                            px="2"
+                            py="1"
+                            borderRadius="full"
+                            fontSize="0.8em" // Adjust font size as needed
+                        >
                             {tech}
                         </Badge>
                     ))}
                 </Flex>
                 <Flex gridGap="3" mt="3">
                     <Link href={project.liveLink} isExternal>
-                        <Button colorScheme="blue">See Live</Button>
+                        <Button color="green">See Live</Button>
                     </Link>
                     <Link href={project.githubLink} isExternal>
                         <Button variant="outline">Source Code</Button>
@@ -59,6 +73,7 @@ const ProjectCard = ({ project, isEven }) => {
         </Box>
     );
 };
+
 
 const Projects = () => {
     const projectsList = [
@@ -91,19 +106,17 @@ const Projects = () => {
     return (
         <Box maxWidth="1200px" margin="0 auto" padding="50px" p={{ base: "20px", md: "50px" }}>
             <Heading marginBottom={{ base: "30px", md: "50px" }}>My Projects</Heading>
-            <Flex direction={{ base: "column", md: "row" }} gap="20px">
+            <Flex direction={{ base: "column", md: "row" }} flexWrap="wrap" justifyContent="space-between"> {/* Ensure wrapping and spacing */}
                 {projectsList.map((project, index) => (
                     <ProjectCard
                         key={index}
                         project={project}
-                        isEven={index % 2 === 0}
                     />
                 ))}
             </Flex>
         </Box>
     );
 };
-
 export default Projects;
 
 

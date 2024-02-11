@@ -54,7 +54,7 @@ function TerminalStart() {
                 clearInterval(interval);
                 setTimeout(() => {
                     setLines([]);
-                    navigate('/about');
+                    navigate('/home');
                 }, 2000);
             }
         }

@@ -58,13 +58,13 @@ const Experience = () => {
                             key={index} 
                             marginBottom="10px" 
                             paddingLeft="10px" 
-                            borderLeft={activeJob === index ? "4px solid teal" : "4px solid transparent"} 
+                            borderLeft={activeJob === index ? "4px solid rgb(0, 91, 65)" : "4px solid transparent"} 
                         >
                             <Text
                                 fontSize="lg"
                                 fontWeight={activeJob === index ? 'bold' : 'normal'}
                                 cursor="pointer"
-                                color={activeJob === index ? 'teal' : 'inherit'} 
+                                color={activeJob === index ? 'rgb(0, 91, 65)' : 'inherit'} 
                                 onClick={() => setActiveJob(index)}
                             >
                                 {job.company}
@@ -74,7 +74,7 @@ const Experience = () => {
                 </Box>
 
                 <Box flex="2" mt={{ base: "20px", md: "0" }} marginLeft={{ md: "50px" }}>
-                    <Text fontSize="xl" fontWeight="bold" color="teal">{jobs[activeJob].role}</Text>
+                    <Text fontSize="xl" fontWeight="bold" color="rgb(0, 91, 65)">{jobs[activeJob].role}</Text>
                     <Text>{jobs[activeJob].date}</Text>
                     <Box marginTop="20px">
                         {jobs[activeJob].responsibilities.map((resp, index) => (

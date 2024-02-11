@@ -4,7 +4,8 @@ import {
     Text,
     Heading,
     Icon,
-    VStack
+    VStack,
+    useColorModeValue
 } from "@chakra-ui/react";
 import { FaCode, FaLayerGroup, FaTools } from "react-icons/fa"; 
 
@@ -16,15 +17,27 @@ const boxStyles = {
     boxShadow: "md",
     transition: "boxShadow 0.2s",
     _hover: {
-        boxShadow: "0 0 0 3px teal",
+        boxShadow: "0 0 0 3px #005B41",
     },
 };
 
-const SkillCard = ({ icon, title, description, details }) => {
+const SkillCard = ({ icon, title, description, details, boxStyles }) => {
     return (
-        <Box {...boxStyles}>
+        <Box
+            padding="20px"
+            borderWidth="1px"
+            borderRadius="8px"
+            width="100%"
+            boxShadow="md"
+            borderColor="transparent" 
+            transition="all 0.3s ease"
+            _hover={{
+                borderColor: "#005B41", 
+                boxShadow: "0 0 0 3px rgba(56, 178, 172, 0.5)", 
+            }}
+        >
             <VStack spacing={3} alignItems="start">
-                <Icon as={icon} boxSize={8} aria-label={title} color="teal" />
+                <Icon as={icon} boxSize={8} color="#005B41" />
                 <Text fontWeight="bold" fontSize="xl">
                     {title}
                 </Text>
@@ -38,6 +51,8 @@ const SkillCard = ({ icon, title, description, details }) => {
         </Box>
     );
 };
+
+
 
 const Skills = () => {
     return (
@@ -54,13 +69,13 @@ const Skills = () => {
                     icon={FaLayerGroup}
                     title="Frameworks"
                     description="Experienced in popular frameworks and tools."
-                    details={["Linux", "React", "NodeJS", "Django", "Flask", "Selenium", "Git", "Firebase", "Kibana", "WordPress"]}
+                    details={["Linux", "React", "NodeJS", "Django", "Flask", "Ansible", "Selenium", "Git", "Firebase", "Kibana"]}
                 />
                 <SkillCard
                     icon={FaTools}
                     title="Programs and Applications"
                     description="Familiar with development and design software."
-                    details={["VS Code", "Android Studio", "XCode", "Eclipse", "MySQL DBMS"]}
+                    details={["VS Code", "Android Studio", "XCode", "Postman", "Ansible Tower", "Splunk", "MySQL DBMS"]}
                 />
             </Flex>
         </Box>
