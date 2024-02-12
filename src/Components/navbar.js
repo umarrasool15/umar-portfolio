@@ -6,7 +6,7 @@ const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const location = useLocation();
     
-    const displayLogo = useBreakpointValue({ base: 'none', sm: 'block' }); // Hide on base (smallest breakpoint), show from 'sm' breakpoint and above
+    const displayLogo = useBreakpointValue({ base: 'none', sm: 'block' });
 
     const getButtonStyles = (path) => {
         if (location.pathname === path) {

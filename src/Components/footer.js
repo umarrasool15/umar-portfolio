@@ -4,11 +4,11 @@ const Footer = () => {
     return (
         <Box
             as="footer"
-            bg="#070707" // Corrected the color code
+            bg="#070707"
             color="whiteAlpha.800"
             py="4"
-            borderTop="1px" // Add a top border
-            borderColor="whiteAlpha.300" // Choose a border color that is subtle
+            borderTop="1px"  
+            borderColor="whiteAlpha.300" 
         >
             <Container maxW="container.xl">
                 <Flex align="center" justify="space-between">
