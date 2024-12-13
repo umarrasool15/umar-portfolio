@@ -9,6 +9,7 @@ import Projects from './Components/Projects';
 import TerminalStart from './Components/Terminal';
 import Footer from './Components/footer';
 import theme from './theme';
+import Gallery from './Components/Gallery';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/skills" element={<Skills />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/projects" element={<Projects />} />
           </Routes>
         </Box>

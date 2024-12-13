@@ -55,7 +55,7 @@ function TerminalStart() {
                 setTimeout(() => {
                     setLines([]);
                     navigate('/home');
-                }, 2000);
+                }, 100);
             }
         }
     }, (lineIndex === 0 ? 100 : 500));

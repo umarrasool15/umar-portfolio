@@ -40,6 +40,9 @@ const Navbar = () => {
                 <Link to="/skills">
                     <Button as="a" variant="link" mr="5" {...getButtonStyles("/skills")}>Skills</Button>
                 </Link>
+                <Link to="/gallery">
+                    <Button as="a" variant="link" mr="5" {...getButtonStyles("/gallery")}>Gallery</Button>
+                </Link>
                 <Link to="/projects">
                     <Button as="a" variant="link" mr="5" {...getButtonStyles("/projects")}>Projects</Button>
                 </Link>

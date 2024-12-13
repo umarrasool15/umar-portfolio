@@ -1,5 +1,5 @@
 import { Flex, Text, Button, Image, useColorMode, Link } from '@chakra-ui/react';
-import { FaFileDownload, FaLinkedin, FaGithub} from 'react-icons/fa';
+import { FaFileDownload, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Home = () => {
     const { colorMode } = useColorMode();
@@ -9,66 +9,45 @@ const Home = () => {
             direction="column"
             alignItems="center"
             justifyContent="center"
-            width="full"
-            height="90vh"
+            w="full"
+            h="90vh"
             bg={colorMode === 'light' ? 'brand.lightBackground' : 'brand.darkBackground'}
-            padding="6"
+            p="4"
         >
             <Flex alignItems="center" flexDirection="column">
                 <Image
-                    borderRadius="full"
-                    boxSize="300px"
                     src="/umar.jpeg"
                     alt="Umar Rasool"
-                    mb="4"
+                    maxW="600px"
+                    w="100%"
+                    h="auto"
+                    objectFit="cover"
+                    borderRadius="12px"
                 />
-                <Text fontSize="3xl" fontWeight="bold">Umar Rasool</Text>
-                <Text textAlign="center" fontSize="md" mt="2">Aspiring Developer.</Text>
-                <Text textAlign="center" fontSize="md" mt="2">Lifelong Learner.</Text>
-                <Text textAlign="center" fontSize="md" mt="7">Seeking Internships for Fall 2024 / Winter 2025.</Text>
-
-                <Flex mt="6" gridGap="3">
-                    <a href="https://drive.google.com/file/d/15QF-olHjVSTMzmpkoVJ6znc45TUwk-tK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                        <Button 
-                            leftIcon={<FaFileDownload />} 
-                            variant="outline"
-                            _hover={{
-                            boxShadow: '0 0 0 3px #005B41',
-                            transition: 'boxShadow 0.2s'
-                            }}
-                        >
+                <Text fontSize="3xl" fontWeight="bold" mt="5">Umar Rasool</Text>
+                <Text textAlign="center" fontSize="md" mt="2">Developer</Text>
+                <Text textAlign="center" fontSize="md">Lifelong Learner</Text>
+                <Text textAlign="center" fontSize="md" mt="5">Seeking New Grad Roles.</Text>
+                <Flex mt="6" gap="3">
+                    <Link href="https://drive.google.com/file/d/15QF-olHjVSTMzmpkoVJ6znc45TUwk-tK/view?usp=sharing" isExternal>
+                        <Button leftIcon={<FaFileDownload />} variant="outline" _hover={{ boxShadow: '0 0 0 3px #005B41', transition: 'boxShadow 0.2s' }}>
                             Resume
                         </Button>
-                        </a>
+                    </Link>
                     <Link href="https://www.linkedin.com/in/umarrasool" isExternal>
-                        <Button 
-                            leftIcon={<FaLinkedin />} 
-                            variant="outline"
-                            _hover={{
-                                boxShadow: '0 0 0 3px #005B41',
-                                transition: 'boxShadow 0.2s'
-                            }}
-                        >
+                        <Button leftIcon={<FaLinkedin />} variant="outline" _hover={{ boxShadow: '0 0 0 3px #005B41', transition: 'boxShadow 0.2s' }}>
                             LinkedIn
                         </Button>
                     </Link>
                     <Link href="https://www.github.com/umarrasool15" isExternal>
-                        <Button 
-                            leftIcon={<FaGithub />} 
-                            variant="outline"
-                            _hover={{
-                                boxShadow: '0 0 0 3px #005B41',
-                                transition: 'boxShadow 0.2s'
-                            }}
-                        >
+                        <Button leftIcon={<FaGithub />} variant="outline" _hover={{ boxShadow: '0 0 0 3px #005B41', transition: 'boxShadow 0.2s' }}>
                             Github
                         </Button>
                     </Link>
-                    
                 </Flex>
             </Flex>
         </Flex>
     );
-}
+};
 
 export default Home;
