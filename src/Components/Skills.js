@@ -63,7 +63,7 @@ const Skills = () => {
                     icon={FaCode}
                     title="Languages"
                     description="Proficient in various programming languages."
-                    details={["Python", "Java", "C", "PowerShell", "SQL", "HTML/CSS", "JavaScript", "VBA"]}
+                    details={["Python", "Java", "C", "PowerShell", "SQL", "JavaScript", "VBA"]}
                 />
                 <SkillCard
                     icon={FaLayerGroup}
@@ -73,9 +73,9 @@ const Skills = () => {
                 />
                 <SkillCard
                     icon={FaTools}
-                    title="Programs and Applications"
+                    title="Software"
                     description="Familiar with development and design software."
-                    details={["VS Code", "Android Studio", "XCode", "Postman", "Ansible Tower", "Splunk", "MySQL DBMS"]}
+                    details={["GCP", "Docker", "CI/CD", "Kubernetes", "Jupyter Notebook", "Splunk", "Postman"]}
                 />
             </Flex>
         </Box>
