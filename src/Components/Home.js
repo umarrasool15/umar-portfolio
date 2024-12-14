@@ -29,7 +29,7 @@ const Home = () => {
                 <Text textAlign="center" fontSize="md">Lifelong Learner</Text>
                 <Text textAlign="center" fontSize="md" mt="5">Seeking New Grad Roles.</Text>
                 <Flex mt="6" gap="3">
-                    <Link href="https://drive.google.com/file/d/15QF-olHjVSTMzmpkoVJ6znc45TUwk-tK/view?usp=sharing" isExternal>
+                    <Link href="https://drive.google.com/file/d/1mELcmS54yjKGCG_pEpQ7bI0klmKi8hn8/view?usp=sharing" isExternal>
                         <Button leftIcon={<FaFileDownload />} variant="outline" _hover={{ boxShadow: '0 0 0 3px #005B41', transition: 'boxShadow 0.2s' }}>
                             Resume
                         </Button>
