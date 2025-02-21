@@ -14,10 +14,10 @@ const Experience = () => {
             date: "Sep 2024 - Present",
             tech: "Java, Spring Boot, Electron, Postman, Bash, GCP, BigQuery, Python, PowerShell",
             responsibilities: [
-                "Built department-wide engineer onboarding system using Electron, Python, and PowerShell reducing setup time by 86% (from one week to one day) serving tens of teams and hundreds of employees",
-                "Performed discovery and architecture design for new GCP data sources, analyzing ingestion patterns across data types and optimizing ETL processes to accommodate diverse data structures, resulting in more efficient data integration",
-                "Designed and implemented automated data ingestion workflows using Python and Directed Acyclic Graphs in Apache Airflow, ensuring reliable scheduling and seamless ETL execution, with data loaded into BigQuery for analysis on Google Cloud Platform",
-                "Developed endpoint tests for critical API endpoints, resolving a critical security vulnerability across multiple microservices",
+                "Created an onboarding system for engineers that streamlined setup from a week to just one day, benefiting multiple teams and hundreds of employees",
+                "Researched and designed solutions for new data sources on Google Cloud, improving how different types of data are processed and integrated",
+                "Built automated workflows to handle data efficiently, ensuring smooth and reliable movement of information into BigQuery for analysis",
+                "Developed and tested API security measures, identifying and fixing a major vulnerability affecting multiple services",
             ],
         },
         {
